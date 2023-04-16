@@ -1,10 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 const props = defineProps({
     image: String,
     title: String,
     edit: Boolean
 })
+
 
 const imageSrc = ref(props.image)
 
@@ -32,11 +33,17 @@ function selectImage(index) {
     showChoice.value = false
 }
 
+watch(() => props.edit, (value) => {
+    if(value==false){
+        showChoice.value=false
+    }
+});
+
 </script>
 <template>
     <slot>
         <figure class="flex items-center flex-col" v-if="!showChoice">
-            <img @click="displayModal()" class="w-full" :src="imageSrc" alt="" :class="{'cursor-pointer':edit}">
+            <img @click="displayModal()" class="w-full" :src="imageSrc" alt="" :class="{ 'cursor-pointer': edit }">
             <figcaption class="text-sm text-gray-500 mx-auto">
                 {{ title }}
             </figcaption>
