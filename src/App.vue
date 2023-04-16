@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import FigurePro from './components/FigurePro.vue';
 </script>
 
 <template>
@@ -22,16 +23,10 @@ import HelloWorld from './components/HelloWorld.vue'
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, praesentium accusantium nulla soluta modi provident velit. At unde voluptas officia magni, commodi nesciunt explicabo id?</p>
         <p>Quis omnis, corrupti ut dolore error officiis, mollitia quod voluptatem quo tempora ipsam vero dolorem id sequi accusamus ducimus aspernatur eligendi enim accusantium deserunt delectus!</p>
         <p>Quas, esse culpa cum voluptatibus modi illum repellendus quidem tempore quaerat dolorum nisi, nostrum, autem voluptatum laudantium consequuntur aut obcaecati dolore dicta sapiente hic ea?</p>
-        <figure class="flex items-center flex-col">
-          <img class="w-full" src="https://images.unsplash.com/photo-1605772575717-4548a90a5349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" alt="">
-          <figcaption class="text-sm text-gray-500 mx-auto">Digital art by Anonymous</figcaption>
-        </figure>
+        <FigurePro image="https://images.unsplash.com/photo-1605772575717-4548a90a5349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" title="A Fantastic Image"/>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas repudiandae vel dolorem quam dicta in blanditiis, nisi explicabo labore?</p>
         <p>Autem iure non sequi hic aspernatur quas sed, praesentium voluptatum deserunt totam aliquid dolorem quaerat voluptates animi, quis architecto laborum!</p>
-        <figure class="flex items-center flex-col">
-          <img class="w-full" src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" alt="">
-          <figcaption class="text-sm text-gray-500 mx-auto">Digital art by Anonymous</figcaption>
-        </figure>
+        <FigurePro image="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" title="Another Fantastic Image"/>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas repudiandae vel dolorem quam dicta in blanditiis, nisi explicabo labore?</p>
         <p>Autem iure non sequi hic aspernatur quas sed, praesentium voluptatum deserunt totam aliquid dolorem quaerat voluptates animi, quis architecto laborum!</p>
       </div>
