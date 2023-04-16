@@ -1,10 +1,13 @@
 <script setup>
+import {ref} from 'vue'
 import HelloWorld from './components/HelloWorld.vue'
 import FigurePro from './components/FigurePro.vue';
+
+const editMode = ref(false)
 </script>
 
 <template>
-  <main class="container mx-auto my-10">
+  <main class="container mx-auto py-10">
     <article class="max-w-2xl mx-auto">
       <header class="mb-4 lg:mb-6 not-format">
         <address class="flex items-center mb-6 not-italic">
@@ -17,18 +20,22 @@ import FigurePro from './components/FigurePro.vue';
             </div>
           </div>
         </address>
-        <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Vue.js Image Picker Example</h1>
+        <h1 :contenteditable="editMode" class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Vue.js Image Picker Example</h1>
+        <button @click="editMode=!editMode" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+          <span v-if="!editMode">Turn On Edit Mode</span>
+          <span v-if="editMode">Turn Off Edit Mode</span>
+        </button>
       </header>
       <div class="flex flex-col space-y-5">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, praesentium accusantium nulla soluta modi provident velit. At unde voluptas officia magni, commodi nesciunt explicabo id?</p>
-        <p>Quis omnis, corrupti ut dolore error officiis, mollitia quod voluptatem quo tempora ipsam vero dolorem id sequi accusamus ducimus aspernatur eligendi enim accusantium deserunt delectus!</p>
-        <p>Quas, esse culpa cum voluptatibus modi illum repellendus quidem tempore quaerat dolorum nisi, nostrum, autem voluptatum laudantium consequuntur aut obcaecati dolore dicta sapiente hic ea?</p>
-        <FigurePro image="https://images.unsplash.com/photo-1605772575717-4548a90a5349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" title="A Fantastic Image"/>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas repudiandae vel dolorem quam dicta in blanditiis, nisi explicabo labore?</p>
-        <p>Autem iure non sequi hic aspernatur quas sed, praesentium voluptatum deserunt totam aliquid dolorem quaerat voluptates animi, quis architecto laborum!</p>
-        <FigurePro image="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" title="Another Fantastic Image"/>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas repudiandae vel dolorem quam dicta in blanditiis, nisi explicabo labore?</p>
-        <p>Autem iure non sequi hic aspernatur quas sed, praesentium voluptatum deserunt totam aliquid dolorem quaerat voluptates animi, quis architecto laborum!</p>
+        <p :contenteditable="editMode">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, praesentium accusantium nulla soluta modi provident velit. At unde voluptas officia magni, commodi nesciunt explicabo id?</p>
+        <p :contenteditable="editMode">Quis omnis, corrupti ut dolore error officiis, mollitia quod voluptatem quo tempora ipsam vero dolorem id sequi accusamus ducimus aspernatur eligendi enim accusantium deserunt delectus!</p>
+        <p :contenteditable="editMode">Quas, esse culpa cum voluptatibus modi illum repellendus quidem tempore quaerat dolorum nisi, nostrum, autem voluptatum laudantium consequuntur aut obcaecati dolore dicta sapiente hic ea?</p>
+        <FigurePro :edit="editMode" image="https://images.unsplash.com/photo-1605772575717-4548a90a5349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80" title="A Fantastic Image"/>
+        <p :contenteditable="editMode">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas repudiandae vel dolorem quam dicta in blanditiis, nisi explicabo labore?</p>
+        <p :contenteditable="editMode">Autem iure non sequi hic aspernatur quas sed, praesentium voluptatum deserunt totam aliquid dolorem quaerat voluptates animi, quis architecto laborum!</p>
+        <FigurePro :edit="editMode" image="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" title="Another Fantastic Image"/>
+        <p :contenteditable="editMode">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem voluptas repudiandae vel dolorem quam dicta in blanditiis, nisi explicabo labore?</p>
+        <p :contenteditable="editMode">Autem iure non sequi hic aspernatur quas sed, praesentium voluptatum deserunt totam aliquid dolorem quaerat voluptates animi, quis architecto laborum!</p>
       </div>
     </article>
   </main>
