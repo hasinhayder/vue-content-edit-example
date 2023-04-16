@@ -13,7 +13,9 @@ const images = [
     'https://images.unsplash.com/photo-1545081576-5b7e640c083a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fG1vYmlsZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     'https://images.unsplash.com/photo-1547416400-e55d9817e9cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fG1vYmlsZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     'https://images.unsplash.com/photo-1614443890409-2bc89f8ba3ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NjR8fG1vYmlsZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-    'https://images.unsplash.com/photo-1562433745-a78af0fc7487?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fG1vYmlsZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
+    'https://images.unsplash.com/photo-1562433745-a78af0fc7487?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzB8fG1vYmlsZSUyMHBob3RvZ3JhcGh5fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
+    'https://images.unsplash.com/photo-1605772575717-4548a90a5349?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80',
+    'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80'
 ]
 
 const showChoice = ref(false)
@@ -40,9 +42,9 @@ function selectImage(index) {
             </figcaption>
         </figure>
         <div class="p-10 border border-gray-400" v-if="showChoice">
-            <div class="flex space-x-2">
+            <div class="grid grid-cols-4 gap-2">
                 <div v-for="(image, index) in images">
-                    <img :key="index" @click="selectImage(index)" :src="image" class="w-[100px] cursor-pointer" />
+                    <img :key="index" @click="selectImage(index)" :src="image" class="cursor-pointer" />
                 </div>
             </div>
             <button @click="showChoice = false" class="mt-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Close</button>
