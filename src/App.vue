@@ -20,7 +20,7 @@ const editMode = ref(false)
             </div>
           </div>
         </address>
-        <h1 :contenteditable="editMode" class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Vue.js Image Picker Example</h1>
+        <h1 :contenteditable="editMode" class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Vue.js Content Edit With Image Picker</h1>
         <button @click="editMode=!editMode" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
           <span v-if="!editMode">Turn On Edit Mode</span>
           <span v-if="editMode">Turn Off Edit Mode</span>
