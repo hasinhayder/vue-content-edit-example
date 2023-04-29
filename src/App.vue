@@ -13,17 +13,18 @@ const editMode = ref(false)
           <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
             <img class="mr-4 w-16 h-16 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
             <div>
-              <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">John Doe</a>
+              <a href="#" rel="author" class="text-xl font-bold text-gray-900">John Doe</a>
               <p class="text-base font-light text-gray-500 dark:text-gray-400">An amazing author from the parallel universe</p>
               <p class="text-base font-light text-gray-500 dark:text-gray-400"><time>April 16, 2023</time></p>
             </div>
           </div>
         </address>
-        <h1 :contenteditable="editMode" class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Vue.js Content Edit With Image Picker</h1>
+        <h1 :contenteditable="editMode" class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl ">Vue.js Content Edit With Image Picker</h1>
         <button @click="editMode=!editMode" class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
           <span v-if="!editMode">Turn On Edit Mode</span>
           <span v-if="editMode">Turn Off Edit Mode</span>
         </button>
+        <p class="text-purple-500" v-if="editMode">Now click on the texts or images and see how it works!</p>
       </header>
       <div class="flex flex-col space-y-5">
         <p :contenteditable="editMode">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, praesentium accusantium nulla soluta modi provident velit. At unde voluptas officia magni, commodi nesciunt explicabo id?</p>
