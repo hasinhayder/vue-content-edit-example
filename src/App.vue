@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
@@ -7,16 +7,16 @@ import HelloWorld from './components/HelloWorld.vue'
     <article class="max-w-2xl mx-auto">
       <header class="mb-4 lg:mb-6 not-format">
         <address class="flex items-center mb-6 not-italic">
-          <div class="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+          <div class="inline-flex items-center mr-3 text-sm text-gray-900 ">
             <img class="mr-4 w-16 h-16 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-1.jpg" alt="Jese Leos">
             <div>
-              <a href="#" rel="author" class="text-xl font-bold text-gray-900 dark:text-white">John Doe</a>
+              <a href="#" rel="author" class="text-xl font-bold text-gray-900 ">John Doe</a>
               <p class="text-base font-light text-gray-500 dark:text-gray-400">An amazing author from the parallel universe</p>
               <p class="text-base font-light text-gray-500 dark:text-gray-400"><time>April 16, 2023</time></p>
             </div>
           </div>
         </address>
-        <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">Vue.js Image Picker Example</h1>
+        <h1 class="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl ">Vue.js Content Edit with Image Picker</h1>
       </header>
       <div class="flex flex-col space-y-5">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, praesentium accusantium nulla soluta modi provident velit. At unde voluptas officia magni, commodi nesciunt explicabo id?</p>
